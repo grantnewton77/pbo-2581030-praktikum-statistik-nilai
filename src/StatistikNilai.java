@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Locale;
+import java.util.Collections;
 
 public class StatistikNilai {
 
@@ -102,6 +103,15 @@ public class StatistikNilai {
             }
         }
         System.out.println();
+
+        // Membuat salinan agar urutan asli tidak berubah.
+        ArrayList<Integer> terurut = new ArrayList<>(daftar);
+
+        // Mengurutkan salinan dari nilai terkecil ke terbesar.
+        Collections.sort(terurut);
+
+        System.out.println("Terurut : " + terurut);
+        System.out.println("Urutan asli : " + daftar);
 
         input.close();
     }
